@@ -3,7 +3,27 @@ import './Sub.css'
 
 const Sub = () => {
   return (
-    <div>Sub</div>
+    <div className='price-box'>
+        <div className="box">
+            <p>Basic</p>
+
+            <h4>
+                <span>$</span>
+                <span className='basic'>9.99</span>
+            </h4>
+
+        </div>
+
+        <div className="features">
+            <ul>
+                <li>Unlimited Pages</li>
+                <li>Unlimited Bandwidth</li>
+                <li>500GB Storage</li>
+            </ul>
+            
+            <button className='btn theme1'>Buy Now</button>
+        </div>
+    </div>
   )
 }
 
