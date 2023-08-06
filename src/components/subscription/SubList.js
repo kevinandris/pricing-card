@@ -24,8 +24,8 @@ const SubList = () => {
 
             <div className="sub-plans">
                 <Sub />
-                <Sub />
-                <Sub />
+                {/* <Sub />
+                <Sub /> */}
             </div>
 
         </div>
