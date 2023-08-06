@@ -28,7 +28,7 @@ const SubList = () => {
             setBasic(9.99)
             setPro(19.99)
             setMaster(29.99)
-        }
+        } 
     }, [yearly])
     
     return (
@@ -51,9 +51,9 @@ const SubList = () => {
                 </div>
 
                 <div className="sub-plans">
-                    <Sub plan={"Basic"} theme={"theme1"} price={basic} isBasic={true} yearly={yearly}/>
-                    <Sub plan={"Pro"} theme={"theme2"} price={pro} isPro={true} yearly={yearly}/>
-                    <Sub plan={"Master"} theme={"theme3"} price={master} isMaster={true} yearly={yearly}/>
+                    <Sub plan={"Basic"} theme={"theme1"} price={basic} isBasic={true} yearly={yearly} onBuy={() => alert(basic)} />
+                    <Sub plan={"Pro"} theme={"theme2"} price={pro} isPro={true} yearly={yearly} onBuy={() => alert(pro)} />
+                    <Sub plan={"Master"} theme={"theme3"} price={master} isMaster={true} yearly={yearly} onBuy={() => alert(master)} />
                 </div>
 
             </div>
