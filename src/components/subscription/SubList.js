@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './SubList.css'
 import Sub from './Sub'
 
@@ -13,6 +13,23 @@ const SubList = () => {
     const handleClick = () => {
         setYearly(!yearly);
     }
+
+    // function to calculate the percentage of a number
+    const calcPercent = (num, per) => {
+        return ((num * 12) / 100) * per;
+    }; 
+
+    useEffect(() => {
+        if (yearly) {
+            setBasic(calcPercent(basic, 70).toFixed(0))
+            setPro(calcPercent(pro, 70).toFixed(0))
+            setMaster(calcPercent(master, 70).toFixed(0))
+        } else {
+            setBasic(9.99)
+            setPro(19.99)
+            setMaster(29.99)
+        }
+    }, [yearly])
     
     return (
         <section className='main'>
