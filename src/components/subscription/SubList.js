@@ -25,8 +25,8 @@ const SubList = () => {
                     <div className='--flex-center --my2'>
                         <p>Monthly</p>
                         <div className='--mx2'>
-                            <span className="toggle-btn" onClick={handleClick}>
-                                <div className="ball"></div>
+                            <span className={yearly ? "toggle-btn toggled" : "toggle-btn"} onClick={handleClick}>
+                                <div className={yearly ? "ball move" : "ball"}></div>
                             </span>
                         </div>
                         <p>Yearly</p>
