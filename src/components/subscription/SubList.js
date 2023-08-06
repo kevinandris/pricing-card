@@ -7,6 +7,12 @@ const SubList = () => {
     const [basic, setBasic] = useState(9.99);
     const [pro, setPro] = useState(19.99);
     const [master, setMaster] = useState(29.99);
+
+    const [yearly, setYearly] = useState(false);
+
+    const handleClick = () => {
+        setYearly(!yearly);
+    }
     
     return (
         <section className='main'>
@@ -19,7 +25,7 @@ const SubList = () => {
                     <div className='--flex-center --my2'>
                         <p>Monthly</p>
                         <div className='--mx2'>
-                            <span className="toggle-btn">
+                            <span className="toggle-btn" onClick={handleClick}>
                                 <div className="ball"></div>
                             </span>
                         </div>
@@ -28,9 +34,9 @@ const SubList = () => {
                 </div>
 
                 <div className="sub-plans">
-                    <Sub plan={"Basic"} theme={"theme1"} price={basic} isBasic={true}/>
-                    <Sub plan={"Pro"} theme={"theme2"} price={pro} isPro={true}/>
-                    <Sub plan={"Master"} theme={"theme3"} price={master} isMaster={true}/>
+                    <Sub plan={"Basic"} theme={"theme1"} price={basic} isBasic={true} yearly={yearly}/>
+                    <Sub plan={"Pro"} theme={"theme2"} price={pro} isPro={true} yearly={yearly}/>
+                    <Sub plan={"Master"} theme={"theme3"} price={master} isMaster={true} yearly={yearly}/>
                 </div>
 
             </div>

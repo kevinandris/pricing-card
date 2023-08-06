@@ -1,7 +1,7 @@
 import React from 'react'
 import './Sub.css'
 
-const Sub = ({ plan, theme, price, isBasic, isPro, isMaster }) => {
+const Sub = ({ plan, theme, price, isBasic, isPro, isMaster, yearly }) => {
   return (
     <div className='price-box --card'>
         <div className={`box --p2 ${theme}`}>
@@ -10,7 +10,13 @@ const Sub = ({ plan, theme, price, isBasic, isPro, isMaster }) => {
             <h4 className='--text-light'>
                 <span>$</span>
                 <span className='basic'>{price}</span>
+                
+                {yearly && (
+                    <p className='--text-light'>
+                        <del>30% off</del>
+                </p>)}
             </h4>
+            
             {isBasic && <p className='--text-light'>Everything in Basic, plus</p>}
             {isPro && <p className='--text-light'>Everything in Pro, plus</p>}
             {isMaster && <p className='--text-light'>Everything in Master, plus</p>}
