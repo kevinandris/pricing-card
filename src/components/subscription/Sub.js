@@ -1,3 +1,4 @@
+// ! CHILD CLASS -- Exported to SubList.js
 import React from 'react'
 import './Sub.css'
 
@@ -8,7 +9,7 @@ const Sub = ({ plan, theme, price, isBasic, isPro, isMaster, yearly, onBuy}) => 
             <p className='--text-light'>{plan}</p>
 
             <h4 className='--text-light'>
-                <span>$</span>
+                <span className='dollar'>$</span>
                 <span className='basic'>{price}</span>
 
                 {yearly && (
